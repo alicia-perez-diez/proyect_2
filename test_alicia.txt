@@ -1,3 +1,0 @@
-git add sam.txt # Stage the changes
-git commit -m "Add sam.txt" # Commit the changes
-git push -u origin <branch-name>  # Push the changes to the remote repositor
