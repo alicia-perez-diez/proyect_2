@@ -94,6 +94,7 @@ def leer_base_de_datos(url1, url2):
 
 
 def graf_paises(df):
+    #Le pasamos el data frame y nos devuelve la grafica de los paises con mas peliculas
     import plotly.graph_objects as go
 
     #Convertirmos los valores de la columna 'production_countries' en una lista.
@@ -111,6 +112,7 @@ def graf_paises(df):
 
 
 def graf_cir_generos(df):
+    #Le pasamos el data frame y nos devuelve la grafica con el porcentage de peliculas de cada genero
     import plotly.graph_objects as go
 
     #Convertirmos los valores de la columna 'genres' en una lista.
@@ -124,6 +126,7 @@ def graf_cir_generos(df):
 
 
 def graf_generos(df):
+    #Le pasamos el data frame y nos devuelve el grafico con el total de puntuaciones de cada genero segun el numero de personas que han votado
     import pandas as pd
     import numpy as np
     import plotly.express as px
@@ -151,6 +154,7 @@ def graf_generos(df):
 
 
 def graf_duracion(df):
+    #Le pasamos el data frame y nos devuelve el grafico con el las puntuaciones de cada pelicula segun el tiempo que duran
     import plotly.express as px
 
     fig = px.scatter(df, x="score", y="runtime", color="release_year",
@@ -163,6 +167,7 @@ def graf_duracion(df):
     fig.show()
 
 def graf_cir_actores(df):
+    #Le pasamos el data frame y nos devuelve la grafica con el porcentage de veces que ha salido un actor
     import plotly.graph_objects as go
     total_df_not_null = df.dropna(subset = "names")
 
@@ -178,6 +183,7 @@ def graf_cir_actores(df):
 
 
 def graf_actores(df):
+    #Le pasamos el data frame y nos devuelve el grafico con los actores mas queridos de mayor a menor
     import numpy as np
     import plotly.express as px
 
@@ -207,6 +213,7 @@ def graf_actores(df):
 
 
 def graf_cir_directores(df):
+    #Le pasamos el data frame y nos devuelve la grafica con el porcentage de veces que ha dirigido una pelicula cada director
     import plotly.graph_objects as go
 
     total_df_not_null = df.dropna(subset = "directors")
@@ -223,6 +230,7 @@ def graf_cir_directores(df):
 
 
 def graf_directores(df):
+    #Le pasamos el data frame y nos devuelve el grafico con los directores mas queridos de mayor a menor
     import numpy as np
     import plotly.express as px
 
